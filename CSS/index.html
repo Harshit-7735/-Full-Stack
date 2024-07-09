@@ -33,6 +33,13 @@ h1{
 .type-2{
   color:green;
 }
+/*
+.first{
+  color:lime;
+}*/
+.first> li{
+  color: orange;
+}
   </style>
 </head>
 <body>
@@ -57,8 +64,8 @@ h1{
     <h1 id="one" style="color:green;">Heading</h1>
     <h1>Heading</h1> -->
 
-    <!-- CLASSES -->
-     <!-- The use of the classes is to group similar things together -->
+    <!-- CLASSES 
+     The use of the classes is to group similar things together 
       <h1 class="type-1">Heading</h1>
       <h1 class="type-1">Heading</h1>
       <h1 class="type-1">Heading</h1>
@@ -68,6 +75,33 @@ h1{
       <h1 class="type-2">Heading</h1>
       <h1 class="type-2">Heading</h1>
       <h1 class="type-2">Heading</h1>
-<!-- ID will have higher priority than classses itself -->
+ ID will have higher priority than classses itself -->
+
+ <!-- COMBINED SELECTORS 
+  if we want to select tags we wont give styles to a particular tag instead we use the parent class name and children tag to give style 
+
+  <ul class="first">
+    <li>list</li>
+    <li>list</li>
+    <li>list</li>
+    <li>list</li>
+    <li>list</li>
+  </ul>
+  --->
+
+  <!-- But if there is a nested class inside a parent and we want to access the grand children we use class name> tag name -->
+
+  <ul class="first">
+    <li>List</li>
+    <li>List</li>
+    <li>List</li>
+    <ul>
+      <li>List</li>
+      <li>List</li>
+      <li>List</li>
+    </ul>
+    <li>List</li>
+    <li>List</li>
+    </ul>
 </body>
 </html>
