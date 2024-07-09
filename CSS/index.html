@@ -14,10 +14,25 @@
       color:red;
     }
       */
-
+/*
       h1{
         color:red;
       }
+        */
+
+#one{
+  color:blue;
+}
+h1{
+  color:red;
+}
+
+.type-1{
+  color:blue;
+}
+.type-2{
+  color:green;
+}
   </style>
 </head>
 <body>
@@ -27,7 +42,32 @@
   <h2>Heading</h2>
    -->
 
-   <!-- The style defined inside a tag has higher priority then a style defined inside a style tag for a particular style -->
-    <h1 style="color:blue;">Heading</h1>
+<!--    
+   The style defined inside a tag has higher priority then a style defined inside a style tag for a particular style 
+    <h1 style="color:blue;">Heading</h1> -->
+
+
+<!-- 
+     if we want to add styles in the same tag but some differnt styles to a particular tag we use ID and CLASS 
+    <h1 id="one">Heading</h1>
+    <h1>Heading</h1> -->
+
+<!-- 
+     if we apply inline css and internal css together ,then it means that inline css has higher priority than internal css and element and id 
+    <h1 id="one" style="color:green;">Heading</h1>
+    <h1>Heading</h1> -->
+
+    <!-- CLASSES -->
+     <!-- The use of the classes is to group similar things together -->
+      <h1 class="type-1">Heading</h1>
+      <h1 class="type-1">Heading</h1>
+      <h1 class="type-1">Heading</h1>
+      <h1 class="type-1">Heading</h1>
+
+      <h1 class="type-2">Heading</h1>
+      <h1 class="type-2">Heading</h1>
+      <h1 class="type-2">Heading</h1>
+      <h1 class="type-2">Heading</h1>
+<!-- ID will have higher priority than classses itself -->
 </body>
 </html>
