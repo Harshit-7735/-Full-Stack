@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    div{
-      width: 400px;
-      height: 400px;
-      background-color: red;
-      border:20px solid blue;
-      /*
-      padding-top: 30px;
-      padding-right: 40px;
-      padding-bottom: 50px;
-      padding-left: 60px;
-*/
-padding: 20px 20px 30px 40px;
-      /*
-      margin-top: 20px;
-      margin-left: 20px;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        /* display: block; */
+        /* display: inline; */
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+      }
+      div:nth-child(1) {
+        background-color: red;
+      }
+      div:nth-child(2) {
+        background-color: blue;
+      }
+      div:nth-child(3) {
+        background-color: green;
+      }
+      span {
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div></div>
+    <div></div>
+    <div></div> -->
+    <!-- <span></span> -->
 
-    margin: 20px 20px 30px 40px;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    laudantium Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, aspernatur sequi modi error nemo incidunt ducimus blanditiis itaque reprehenderit vel voluptatibus eos similique deleniti voluptatem? Quia est nostrum quo reprehenderit.
-  </div>
-</body>
+    <!--  display:block 
+    <div></div>
+    <div></div>
+    <div></div>
+     -->
+
+     <!-- display : inline ::All will vanish 
+      <div></div>
+      <div></div>
+      <div></div>
+       -->
+
+        <!-- display : inline-block ::All will be visible in a row-->
+          <div></div>
+          <div></div>
+          <div></div>
+          
+  </body>
 </html>
