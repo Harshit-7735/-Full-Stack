@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      div.ele1 {
+        height: 30vh;
+        width: 30vw;
+        /* position: relative; default it will be relative to the page itself  it is relative to the body */
+        background-color: red;
+      }
+      div.ele2 {
+        height: 50px;
+        width: 50px;
+        /* position: relative; relative to the parent div (ele1) */
+        position: absolute; /* relative to the whole page */
+        background-color: blue;
+        /* top: 200px; 
+      left: 150px; */
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ele1">
+      <div class="ele2"></div>
+    </div>
+  </body>
+</html>
