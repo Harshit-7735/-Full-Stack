@@ -1,41 +1,100 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-div.container{
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle, rgba(29,58,194,1) 22%, rgba(155,70,252,1) 87%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+div.container {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(29, 58, 194, 1) 22%,
+    rgba(155, 70, 252, 1) 87%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-div.login-container{
-    width: 432px;
-    height: 535px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 40px;
+div.login-container {
+  width: 432px;
+  height: 535px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
 }
-div.login-container header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+div.login-container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-div.login-container header h1{
-    margin: 24px 0px 0px;
-    font-weight: 900;
+div.login-container header h1 {
+  margin: 24px 0px 0px;
+  font-weight: 900;
 }
-div.login-container header h1 span{
-    color: #7f00ff;
+div.login-container header h1 > span {
+  color: #7f00ff;
 }
-div.login-container header img{
-    width: 48px;
-    height: 48px;
-/* display: block;
+div.login-container header img {
+  width: 48px;
+  height: 48px;
+  /* display: block;
 margin: 0 auto; */
+}
 
+div.login-container p {
+  margin: 24px 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+section {
+  margin: 24px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section input {
+  height: 38px;
+  width: 100%;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  padding: 0px 16px;
+  font-size: 15px;
+}
+div.input-password {
+  margin-top: 24px;
+  display: flex;
+}
+div.input-password img {
+  width: 30px;
+  margin: 0px 4px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 5px;
+}
+div.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+div.forgot-password a {
+  color: #7f00ff;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+}
+div.login-container button {
+  height: 38px;
+  width: 100%;
+  background-color: #473391;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 24px;
+  cursor: pointer;
 }
