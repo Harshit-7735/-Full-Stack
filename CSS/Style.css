@@ -13,7 +13,24 @@ div:hover{
     background-color: cyan;
   }
     */
-
+/*
     input:focus{
       background-color: yellow;
+    }*/
+
+    div{
+      height: 300px;
+      width: 300px;
+      background-color: black;
+      /* transition-duration: 1s; */
+      /* transition-timing-function: ease-in; */
+      /* transition-timing-function: cubic-bezier(0.4, -0.97, 0.58, 1); */
+      /* transition-delay: 3s; */
+      transition: 1s ease-in all 3s;
+    }
+
+
+    div:hover{
+      background-color: gray;
+      height: 100vh;
     }
