@@ -8,7 +8,7 @@ div:hover{
 }
   */
 
-  /*
+/*
   h1::selection{
     background-color: cyan;
   }
@@ -18,14 +18,15 @@ div:hover{
       background-color: yellow;
     }*/
 
+/*
     div{
       height: 300px;
       width: 300px;
       background-color: black;
       /* transition-duration: 1s; */
-      /* transition-timing-function: ease-in; */
-      /* transition-timing-function: cubic-bezier(0.4, -0.97, 0.58, 1); */
-      /* transition-delay: 3s; */
+/* transition-timing-function: ease-in; */
+/* transition-timing-function: cubic-bezier(0.4, -0.97, 0.58, 1); */
+/* transition-delay: 3s; 
       transition: 1s ease-in all 3s;
     }
 
@@ -34,3 +35,19 @@ div:hover{
       background-color: gray;
       height: 100vh;
     }
+    */
+
+div {
+  height: 300px;
+  width: 300px;
+  background-color: orange;
+  transition: 0.5s ease;
+}
+div:hover {
+  /* transform: scale(2); */
+  /* transform: scale(0.2) */
+  /* transform:rotate(80deg); */
+  /* transform: rotate3d(1, 1, 1, 180deg); */
+  /* transform: translate(100px,90px) */
+  /* transform: skew(30deg, 20deg); */
+}
