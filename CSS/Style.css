@@ -7,6 +7,13 @@ div:hover{
   background-color: red;
 }
   */
+
+  /*
   h1::selection{
     background-color: cyan;
   }
+    */
+
+    input:focus{
+      background-color: yellow;
+    }
