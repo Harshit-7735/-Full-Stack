@@ -1,4 +1,4 @@
-div{
+/*div{
   height: 300px;
   width:300px;
   background-color: orange;
@@ -6,3 +6,7 @@ div{
 div:hover{
   background-color: red;
 }
+  */
+  h1::selection{
+    background-color: cyan;
+  }
