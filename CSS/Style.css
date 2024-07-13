@@ -37,6 +37,8 @@ div:hover{
     }
     */
 
+
+    /*
 div {
   height: 300px;
   width: 300px;
@@ -49,5 +51,37 @@ div:hover {
   /* transform:rotate(80deg); */
   /* transform: rotate3d(1, 1, 1, 180deg); */
   /* transform: translate(100px,90px) */
-  /* transform: skew(30deg, 20deg); */
+  /* transform: skew(30deg, 20deg); 
+}
+*/
+
+div{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  transition: 0.5s ease;
+  animation-name: translate;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  /* overflow: hidden; */
+}
+
+@keyframes translate{
+0%{
+  transform: translate(0,0);
+}
+25%{
+  transform: translate(200px,0);
+}
+50%{
+  transform: translate(200px,200px);}
+75%{
+  transform: translate(0,200px);}
+100%{
+  transform: translate(0,0);
+}
 }
