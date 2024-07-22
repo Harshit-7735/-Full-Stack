@@ -1,37 +1,31 @@
-// JSON :java script object notation
-// JSON is a syntax for storing and exchanging data.
+// function greet(){
+//     console.log("Hello World");
+//     // return "Hello World";
 
-const obj1 = {
-  name: "Harshit",
-  age: 22,
-  ismarried: true,
-};
+// }
+// greet()
 
-const car={
-    model:"Audi",
-    year:2021,
+// const result= greet()
+// console.log(result);// undefined because greet function does not return anything so it will return undefined
+
+
+
+// function greet(Name, age) {
+//   console.log("Hello " + Name + " you are " + age + " years old");
+// }
+// // greet("John",25)
+// greet("Jane");
+
+
+greet2("John", 25);
+    greet("Jane", 25);
+// it is a function
+function greet(Name, age) {
+  console.log("Hello " + Name + " you are " + age + " years old");
 }
-const obj = {
-  name: "Harshit",
-  age: 22,
-  ismarried: false,
-  // function inside object is called method
-  greet: function () {
-    console.log("Hello there");
-  },
-  // an object can have another object as a property
-  address: {
-    city: "Delhi",
-    state: "Delhi",
-  },
-  //an object can have array inside an object as a property
-  hobbies: ["coding", "reading", "travelling"],
-  //an object can have another object as a property
-  obj1: obj1,
-  car:car,
-};
-console.log(obj);
-// accessing object properties
-obj.greet();
-console.log(obj.address);
-console.log(obj.hobbies);
+// it is a variable that holds a function
+  const greet2 = function (Name, age) {
+    console.log("Hello " + Name + " you are " + age + " years old");
+    }
+    // greet2("John", 25);
+    // greet("Jane", 25);
