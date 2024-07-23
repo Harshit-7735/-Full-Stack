@@ -1,19 +1,57 @@
-// pass by reference
-const obj={
-  name:"john",
-  // age:30,
+/*
+const arr=[1,2,3,4,5];
+console.log(arr);
+arr.push(6);
+console.log(arr);
+arr.pop();
+console.log(arr);
+console.log(arr.length);
+
+arr.unshift(0);
+console.log(arr);
+arr.shift();
+console.log(arr);
+*/
+/*
+const arr = ["apple", "banana", "cherry"];
+const callback = function (item, index) {
+  console.log(item, index);
+};
+arr.forEach(callback);
+*/
+
+
+/*
+const arr=["jpe","jane","jack"]
+arr.forEach(function(item,index){
+  console.log(item,index);
+})
+  */
+
+
+const arr=[1,2,3,4,5,6,7,8,9,10]
+const newArr=[]
+
+// for(let i=0;i<arr.length;i++){
+//   newArr.push(arr[i]*19)
+// }
+
+// arr.forEach(function(item){
+//   newArr.push(item*19)
+// })
+
+// foreach doesn't return anything 
+// map returns
+/*
+const newArr2=arr.map(function(item){
+  return item*19;
+})
+console.log(newArr2);
+*/
+
+const reduceFunction=function(prev,curr){
+  console.log(prev,curr)
+  return prev+curr;
 }
-// javascript is a reference type language so when we create a object and assign it to another object then both objects will point to the same memory location
-const obj1=obj;
-obj.name="peter"; // we can override the value of original object by changing the value of obj1
-obj1.age=25; // we can add new property to the original object by adding the property to obj1
-console.log(obj1);
-
-
-// primitive types are not reference type so when we assign a value to another variable then both variables will point to different memory location
-//pass by value
-let a=10;
-let b=a;
-a=20;
-console.log(b); // it will print 10
-console.log(a); // it will print 20
+const res2=arr.reduce(reduceFunction,0)
+console.log(res2);
