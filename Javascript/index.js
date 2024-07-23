@@ -1,41 +1,45 @@
-// function greet(){
-//     console.log("Hello World");
-//     // return "Hello World";
-
-// }
-// greet()
-
-// const result= greet()
-// console.log(result);// undefined because greet function does not return anything so it will return undefined
-
-
-
-// function greet(Name, age) {
-//   console.log("Hello " + Name + " you are " + age + " years old");
-// }
-// // greet("John",25)
-// greet("Jane");
-
+/*
+class car {
+  name = "BMW"; // property of class car
+  // consructor is a special method in class which is called when an object is created of that class
+  constructor() {
+    console.log("Constructor called");
+  }
+}
+// Creating an object of class car
+// new keyword is used to create an object of class
+const car1 = new car();
+console.log(car1);
+*/
 
 /*
-// it is a function
-greet1("John", 25);
-function greet1(Name, age) {
-  console.log("Hello " + Name + " you are " + age + " years old");
+class car {
+  constructor(name, brand) {
+    this.name = name;
+    this.brand = brand;
+    // this is pointing to the object of the class car which is created using new keyword
+    console.log(this); // this keyword is used to access the properties of the class inside the class itself
+  }
 }
-// it is a variable that holds a function
-greet2("Jane", 25);
-  const greet2 = function (Name, age) {
-    console.log("Hello " + Name + " you are " + age + " years old");
-    }
-    // greet2("John", 25);
-    // greet("Jane", 25);
+const car1 = new car("BMW", "X5");
+// console.log(car1);
 */
-    console.log(this)
-const obj={
-    name:'Jane',
-    greet:function(){
-        console.log(this)
-    }
+
+class car {
+  // we can also define properties of class outside the constructor method
+  age = 30;
+  adult = true;
+  constructor(name, brand) {
+    this.name = name;
+    this.brand = brand;
+    this.age = 40; // we can also change the value of properties of class inside the constructor method using this keyword
+
+    console.log(this); 
+  }
+  // we can also define methods of class outside the constructor method using function keyword
+  greet() {
+    console.log("Hello, I am " + this.name);
+  }
 }
-obj.greet()// it will return the object obj because this keyword is used inside the object obj
+const car1 = new car("BMW", "X5");
+car1.greet(); // calling the method of class car using object of class car
