@@ -1,40 +1,12 @@
-//  SPREAD OPERATOR
-// spread operator is used to spread the elements of an array or object into another array or object respectively 
-// spread operator is used to make a copy of an array or object
-// spread operator is used to merge two arrays or objects
+// ...REST Operator
+// The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
+// The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+const sum = (...args) => {
+  console.log(args);
+};
+sum(1, 2, 3, 4, 5); // Output: [1, 2, 3, 4, 5]
 
-/*
-const arr=["a","b","c"];
-// console.log(...arr);
-const arr2=[...arr,1,2,3,4]
-console.log(arr2);
-
-const arr3=[...arr];
-arr[0]="z";
-console.log(arr3);
-
-const arr4=arr
-arr[0]='rcb'
-console.log(arr4);
-*/
-
-
-const obj={
-  name:"sachin",
-  age:40,
-  cars:["audi","bmw"],
-  address:{
-    city:"bangalore",
-    pincode:560037
-  }
-}
-
-const obj2={
-  ...obj,
-  age:30
-}
-obj.name="rahul" // this will not change the name in obj2 as it is a value type and it will not change the value in both the objects
-obj.address.city="mumbai" // this will change the city in obj2 also as it is a reference type and it will change the value in both the objects
-
-console.log(obj2);
-
+const sum1 = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+};
+console.log(sum1(1, 2, 3, 4, 5)); // Output: 15
