@@ -1,41 +1,40 @@
-/*
-const a ="Hello"
-const  b="World"
+//  SPREAD OPERATOR
+// spread operator is used to spread the elements of an array or object into another array or object respectively 
+// spread operator is used to make a copy of an array or object
+// spread operator is used to merge two arrays or objects
 
-const c=`${a} ${b}`; // concatination of two strings
-console.log(c);
+/*
+const arr=["a","b","c"];
+// console.log(...arr);
+const arr2=[...arr,1,2,3,4]
+console.log(arr2);
+
+const arr3=[...arr];
+arr[0]="z";
+console.log(arr3);
+
+const arr4=arr
+arr[0]='rcb'
+console.log(arr4);
 */
 
-// DESTRUCTURING
-const arr = ["Hello", "World"];
 
-// It's a normal method
-// const name1=arr[0];
-// const name2=arr[1];
-// const name3=arr[2];
+const obj={
+  name:"sachin",
+  age:40,
+  cars:["audi","bmw"],
+  address:{
+    city:"bangalore",
+    pincode:560037
+  }
+}
 
-const [name1, name2] = arr;
-console.log(name1, name2);
+const obj2={
+  ...obj,
+  age:30
+}
+obj.name="rahul" // this will not change the name in obj2 as it is a value type and it will not change the value in both the objects
+obj.address.city="mumbai" // this will change the city in obj2 also as it is a reference type and it will change the value in both the objects
 
-// DESTRUCTURING OF AN OBJECT
+console.log(obj2);
 
-const obj = {
-  name: "Harshit",
-  cars: ["Audi", "Mercedes"],
-
-  address: {
-    city: "bangalore",
-  },
-};
-const { name, cars, address } = obj;
-console.log(name, cars, address);
-// Aliasing of the object properties
-// Aliasing is a process of giving a new name to the object properties
-const {cars:pizza}=obj;
-console.log(pizza);
-// destructuring of an array while destructuring of an object
-const {cars:[,car2]}=obj;
-console.log(car2);
-
-const {address:{city}}=obj;
-console.log(city);
