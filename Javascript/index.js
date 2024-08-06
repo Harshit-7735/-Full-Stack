@@ -1,19 +1,15 @@
-// console.log(axios);
-
-const response = axios.get('https://jsonplaceholder.typicode.com/todos');// it will take some time to get the response
-console.log(response);
-
-setTimeout(() => {
-    console.log(response);
-}, 3000); // it will print the response after 3 seconds and it is fulfilled promise object with the response data and other properties 
-//it's because of the asynchronous nature of the axios.get() method and the setTimeout() function.
-
+const response = axios.get("https://jsonlaceholder.typicode.com/posts");
+console.log(response); // initially this will log a promise object and its state is pending
+// then is a promise function that is called when the promise is resolved or rejected
+// it takes a callback function as an argument
+// the callback function takes an argument that is the data returned from the promise
+response.then((data) => {
+  console.log(data);
+});
 
 
-//For better mechanism we will use promises
-// promises are the objects that represent the eventual completion or failure of an asynchronous operation and its resulting value.
-
-//promises have 3 states:
-//1. Pending: initial state, neither fulfilled nor rejected.
-//2. Fulfilled: meaning that the operation completed successfully.
-//3. Rejected: meaning that the operation failed.
+// what if something goes wrong?
+// we can use the catch method to handle errors
+response.catch((error) => {
+  console.log(error,"data not found");
+});
