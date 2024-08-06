@@ -1,62 +1,32 @@
-const body = document.querySelector("body");
-const textbox = document.querySelector("h1 span");
-const heading = document.querySelector("h1");
-const input = document.querySelector("input");
+// console.log(1);
+// for(let i=0;i <10000;i++){
+// console.log('100p');
 
+// }
+// console.log(2);
+// console.log(3);
 /*
-let count =0;
-body.addEventListener('click',()=>{
-    console.log("You clicked");
-textbox.innerHTML=++count;
-
-})
+const cb=()=>{
+    console.log("callback");
+}
+setTimeout(cb,5000);
 */
+console.log(1);
 
-/*
-let count =0;
-heading.addEventListener('click',(event)=>{
-    console.log(event);
-    textbox.innerHTML=++count;
-})
-*/
+    setTimeout(() => {
+        console.log(4);
+    }, 0);
+setTimeout(()=>{
+    console.log(2);
+},0)
 
-body.addEventListener("keydown", (event) => {
-  // console.log(event.key);
-});
+for(let i=0;i<10000;i++){
+    console.log('100p');
+}
+console.log(3);
 
-body.addEventListener("keypress", (event) => {
-  // console.log(event.key);
-});
+// for loop executing first then settimeout function is executing because settimeout function is executing after the for loop is executed because of the event loop in javascript 
+// settimeout function is executing after the for loop is executed
 
-body.addEventListener("mousemove", (event) => {
-  // console.log({
-  //     x:event.clientX,
-  //     y:event.clientY
-  // });
-});
-input.addEventListener("focusin", (event) => {
-  // console.log("focus in");
-});
-input.addEventListener("focusout", () => {
-  // console.log("focus out");
-});
 
-input.addEventListener("focus", (e) => {
-  // console.log("input is focused");
-});
-let count = 0;
-window.addEventListener("focus", (e) => {
-//   console.log("Changed the tab");
-});
-
-window.addEventListener("blur", (e) => {
-//   console.log("Changed the tab  blur");
-});
-
-window.addEventListener("resize", (e) => {
-    // console.log("Resized");
-    });
-
-    window.addEventListener('scroll',(e)=>{
-        console.log("scrolled ",window.scrollX,window.scrollY);
-    })
+// set timeout is a native code Javascript doesn't know about the settime out function ..iot will wait in the queue and after all the functions is executed the set timeout will get executed
