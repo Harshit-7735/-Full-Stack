@@ -1,10 +1,8 @@
-const fetchTodos =() => new Promise((resolve, reject) => {
-    setTimeout(() => {
-        // it takes 2 seconds to fetch the data from the server and return it as a promise object
-        // resolve([{id: 1, title: 'Todo 1'}, {id: 2, title: 'Todo 2'}]);
-        reject(new Error('Unable to fetch the data from the server'));
-    }, 2000);
-})
-fetchTodos()
-.then((data)=>{console.log(data)})
-.catch((error)=>{console.log(error)})
+const response =fetch('https://jsonplaceholder.typicode.com/todos')
+// console.log(response);
+// fetch is a inbuilt function in javascript which is used to make a network request to the server. It returns a promise object. 
+//axios is a library which is used to make a network request to the server. It returns a promise object.
+// The difference between fetch and axios is that fetch is a built-in function in javascript whereas axios is a library.
+// fetch is not supported in all browsers whereas axios is supported in all browsers.
+response.then((data)=>{console.log(data)})// it will return the array of objects which is present in the server. while axios returns the object of array of objects.
+// fetch returns the response object whereas axios returns the data object.
