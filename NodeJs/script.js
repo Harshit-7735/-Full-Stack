@@ -1,10 +1,8 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const data = "Hello World"
-
-fs.writeFileSync('test.txt',data)
-fs.writeFile('test2.txt',data,(err)=>{
-    if(err) throw err;
-    console.log("File written successfully");
-    
+const data = fs.readFileSync("test.txt", "utf8");
+fs.readFile('test.txt','utf8',(err,data)=>{
+    if (err) throw err;
+    console.log(data,'async')
 })
+console.log(data,'sync');
