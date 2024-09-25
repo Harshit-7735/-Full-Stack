@@ -6,8 +6,7 @@ const PORT = 8080;
 // express instance
 const app = express();
 
-app.get("/", (req, res) => {
-  // console.log(req);
+const logger = async (req, res, next) => {
   const { headers, method, url, path, query } = req;
   console.log({
     headers,
@@ -16,6 +15,12 @@ app.get("/", (req, res) => {
     path,
     query,
   });
+  next();
+};
+
+app.use(logger)
+app.get("/", (req, res) => {
+  // console.log(req);
 
   res.status(200).send("Server is Running");
 });
@@ -25,11 +30,11 @@ app.get("/", (req, res) => {
 
 app.get("/todos", async (req, res) => {
   try {
-    const {count} = req.query
+    const { count } = req.query;
     const todos = await fs.readFile("./db.json", "utf-8");
-    const parsedtodos= JSON.parse(todos)
+    const parsedtodos = JSON.parse(todos);
     console.log(todos);
-    res.status(200).json((parsedtodos.slice(0,count)));
+    res.status(200).json(parsedtodos.slice(0, count));
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
