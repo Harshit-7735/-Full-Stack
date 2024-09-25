@@ -1,24 +1,41 @@
-const express = require('express')
+const express = require("express");
+const fs = require("fs/promises")
 // console.log(express);
 
-const PORT=8080;
+const PORT = 8080;
 // express instance
-const app = express()
+const app = express();
 
-app.get('/',(req,res)=>{
-    // console.log(req);
-    const {headers,method,url,path,query}=req
-    console.log({
-        headers,
-        method,
-        url,
-        path,query
-    });
-    
-    res.send('hello world')
-    
+app.get("/", (req, res) => {
+  // console.log(req);
+  const { headers, method, url, path, query } = req;
+  console.log({
+    headers,
+    method,
+    url,
+    path,
+    query,
+  });
+
+  res.status(200).send("Server is Running");
+});
+// app.get('/todos',(req,res)=>{
+//     res.status(200).send('todos')
+// })
+
+app.get('/todos',async(req,res)=>{
+    try {
+        const todos = await fs.readFile('./db.json','utf-8')
+        console.log(todos)
+        res.status(200).send(todos)
+    } catch (error) {
+        console.log(error);
+        res.status(500).send(error)
+        
+        
+    }
 })
-app.listen(PORT,()=>{
-    console.log(`Server is running on port ${PORT}`);
-    
-})
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
