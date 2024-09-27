@@ -20,7 +20,7 @@ const logger = async (req, res, next) => {
 };
 
 // validate the token and if token is invalid throw the error
-const isAuthorised = async () => {
+const isAuthorised = async (req,res,next) => {
   try {
     const { token } = req.query;
     if (!token) {
@@ -72,17 +72,10 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.get("/todos", async (req, res) => {
+app.get("/todos",isAuthorised, async (req, res) => {
   try {
-    const { count = 10, token } = req.query;
-    if (!token) {
-      return res.status(401).json({ message: "Token is required" });
-    }
-    const users = await fs.readFile("./users.json", "utf-8");
-    const parsedUsers = JSON.parse(users);
-    if (!parsedUsers.find((user) => user.token === token)) {
-      return res.status(401).json({ message: "invalid token" });
-    }
+    const { count = 10 } = req.query;
+
     const todos = await fs.readFile("./db.json", "utf-8");
     const parsedTodos = JSON.parse(todos);
     res.status(200).json(parsedTodos.slice(0, count));
